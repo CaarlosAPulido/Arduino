@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arduino Esplora Fighter</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Arduino Esplora Fighter</h1>
+    <p>Conecta un Arduino Esplora y controla el personaje con los sensores y botones.</p>
+  </header>
+
+  <main>
+    <section class="game-panel">
+      <canvas id="gameCanvas" width="1000" height="520"></canvas>
+      <div class="controls">
+        <button id="startButton">Iniciar juego</button>
+        <button id="resetButton">Reiniciar</button>
+        <div class="status">
+          <strong>Estado:</strong>
+          <span id="connectionStatus">Desconectado</span>
+        </div>
+        <div class="status">
+          <strong>Juego:</strong>
+          <span id="gameStatus">Esperando inicio</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="debug-panel">
+      <h2>Valores de sensores</h2>
+      <div class="sensor-row"><span>Joystick X:</span><span id="sensorJoystickX">0</span></div>
+      <div class="sensor-row"><span>Joystick Y:</span><span id="sensorJoystickY">0</span></div>
+      <div class="sensor-row"><span>Slider:</span><span id="sensorSlider">0</span></div>
+      <div class="sensor-row"><span>Botón 1:</span><span id="sensorBtn1">0</span></div>
+      <div class="sensor-row"><span>Botón 2:</span><span id="sensorBtn2">0</span></div>
+      <div class="sensor-row"><span>Botón 3:</span><span id="sensorBtn3">0</span></div>
+      <div class="sensor-row"><span>Botón 4:</span><span id="sensorBtn4">0</span></div>
+      <div class="sensor-row"><span>Acelerómetro Z:</span><span id="sensorAccelZ">0</span></div>
+      <div class="sensor-row"><span>Luz:</span><span id="sensorLight">0</span></div>
+      <div class="sensor-row"><span>Micrófono:</span><span id="sensorMicrophone">0</span></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Diseñado para un prototipo de juego de pelea con Arduino Esplora.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
